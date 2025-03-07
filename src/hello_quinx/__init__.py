@@ -1,5 +1,4 @@
-"""hello_quinx package."""
-__version__ = "0.1.4"
+from .core import __version__
 
 from .recipe.greeting import hello, hi, whatsup
 
