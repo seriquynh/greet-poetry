@@ -1,7 +1,5 @@
-
-
-
 from .core import __version__
+
 
 class Console:
     def __init__(self):
