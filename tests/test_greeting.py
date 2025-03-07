@@ -1,4 +1,4 @@
-from hello_quinx import Person, goodbye, hello, hi, whatsup
+from hello import Person, goodbye, hello, hi, whatsup
 
 
 def test_hello():
