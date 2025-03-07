@@ -1,0 +1,23 @@
+name: Lint
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install poetry
+      - run: poetry install
+      - name: Flak8
+        run: flake8 src/ --exclude __init__.py
+      - name: Black
+        run: black --check src/
+      - name: Isort
+        run: isort --check-only src/

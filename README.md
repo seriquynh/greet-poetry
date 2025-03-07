@@ -15,17 +15,36 @@ I want to create a PyPI package. Therefore, I need to answer some questions:
 - `pyproject.toml` is a configuration file, to define build system requirements, project metadata, and other settings.
 
 ## Code style
-- `black` package for code formatting.
-- `isort` package for sorting imports. 
+
 - `flake8` package for code linting.
+    ```bash
+    flake8 src/**/*.py --exclude __init__.py
+    ```
+
+- `black` package for code formatting.
+    ```bash
+    black src/
+    black --check src/ 
+    ```
+
+- `isort` package for sorting imports.
+    ```bash
+    isort src/
+    isort --check-only src/
+    ```
 
 > I consider they are in the category with ESLint and Prettier, but for Python only.
 
+
 ## Testing
 - `pytest` package for unit testing.
+    ```bash
+    poetry run pytest
+    ```
 
 ## Commands
 
+Test, Build and Publish.
 ```bash
 pip install poetry
 
