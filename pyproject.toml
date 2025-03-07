@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "hello"
-version = "0.1.0"
+name = "hello_quinx"
+version = "0.1.4"
 description = "Learn how to publish a PyPI package"
 authors = ["Quynh Nguyen <seriquynh@gmail.com>"]
 readme = "README.md"
-packages = [{include = "hello", from = "src"}]
+packages = [{include = "hello_quinx", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.8.1"
@@ -16,7 +16,7 @@ isort = "^5.12.0"
 flake8 = "^6.1.0"
 
 [tool.poetry.scripts]
-hello = "hello.cli:app"
+hello = "hello_quinx.cli:app"
 
 [build-system]
 requires = ["poetry-core"]

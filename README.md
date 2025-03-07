@@ -33,5 +33,9 @@ poetry install
 
 poetry run pytest
 
-p
+poetry build
+
+poetry config pypi-token.pypi pypi-api-token-here
+
+peotry publish
 ```
