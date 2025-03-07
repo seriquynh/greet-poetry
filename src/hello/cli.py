@@ -10,7 +10,7 @@ class Console:
         return self
 
     def run(self):
-        print(f"hello_quinx CLI {__version__}")
+        print(f"Hello CLI {__version__}")
 
         print("\nAvailable commands:")
 
