@@ -1,4 +1,4 @@
-Learn PyPI package
+Greet Poetry
 
 ## About
 
@@ -14,47 +14,49 @@ I want to create a PyPI package. Therefore, I need to answer some questions:
 - `tests` directory contains test files
 - `pyproject.toml` is a configuration file, to define build system requirements, project metadata, and other settings.
 
-## Code style
 
-- `flake8` package for code linting.
-    ```bash
-    flake8 src/**/*.py --exclude __init__.py
-    ```
+## Requirements
 
-- `black` package for code formatting.
-    ```bash
-    black src/
-    black --check src/ 
-    ```
+- Python `3.11`, `3.12`, `3.13`
 
-- `isort` package for sorting imports.
-    ```bash
-    isort src/
-    isort --check-only src/
-    ```
+## Development
 
-> I consider they are in the category with ESLint and Prettier, but for Python only.
+Install `poetry` CLI.
 
-
-## Testing
-- `pytest` package for unit testing.
-    ```bash
-    poetry run pytest
-    ```
-
-## Commands
-
-Test, Build and Publish.
 ```bash
 pip install poetry
+```
 
+Install project dependencies.
+
+```bash
 poetry install
+```
 
+Fix code style using `autoflake`, `black` and `isort`.
+
+```bash
+poetry run autoflake --in-place --remove-unused-variables -r src/ tests/; poetry run black src/ tests/; poetry run isort src/ tests/;
+```
+
+Analyze code using `mypy`.
+
+```bash
+poetry run mypy src/ tests/
+```
+
+Run tests using `pytest`.
+
+```bash
 poetry run pytest
+```
 
+Build and publish to `PyPI`.
+
+```bash
 poetry build
 
-poetry config pypi-token.pypi pypi-api-token-here
+poetry config pypi-token.pypi <pypi-api-token>
 
 peotry publish
 ```

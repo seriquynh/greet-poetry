@@ -9,18 +9,26 @@ on:
 jobs:
   lint:
     name: Lint
+
     runs-on: ubuntu-latest
+
+    timeout-minutes: 5
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
+
       - run: pip install poetry
-      - run: which poetry
+
       - run: poetry install
-      - name: Flake8
-        run: poetry run flake8 src/ --exclude __init__.py
-      - name: Black
-        run: poetry run black --check src/
-      - name: Isort
-        run: poetry run isort --check-only src/
+
+      - run: poetry show
+
+      - name: autoflake, black, isort
+        run: |
+          poetry run autoflake --in-place --remove-unused-variables -r src/ tests/ --check; \
+          poetry run black src/ tests/ --check; \
+          poetry run isort src/ tests/ --check;
