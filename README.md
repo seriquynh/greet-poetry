@@ -1,16 +1,16 @@
 <h1 style="text-align: center">Greet Poetry</h1>
 
 <p style="text-align: center">
-    <a href="https://github.com/seriquynh/greet-poetry/actions">
+    <a href="https://github.com/seriquynh/greet-poetry/actions" style="text-decoration: none;">
         <img src="https://github.com/seriquynh/greet-poetry/workflows/test/badge.svg" alt="CI Status">
     </a>
-    <a href="https://pypi.org/project/hapideploy">
+    <a href="https://pypi.org/project/hapideploy" style="text-decoration: none;">
         <img src="https://img.shields.io/pypi/dm/greet-poetry" alt="Monthly Downloads">
     </a>
-    <a href="https://pypi.org/project/hapideploy">
+    <a href="https://pypi.org/project/hapideploy" style="text-decoration: none;">
         <img src="https://img.shields.io/pypi/v/greet-poetry" alt="Latest Stable Version">
     </a>
-    <a href="https://pypi.org/project/hapideploy">
+    <a href="https://pypi.org/project/hapideploy" style="text-decoration: none;">
         <img src="https://img.shields.io/pypi/l/greet-poetry" alt="The MIT License">
     </a>
 </p>
