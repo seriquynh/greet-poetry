@@ -1,14 +1,15 @@
-name: Analyze
+name: analyze
 
 on:
   push:
-    branches: ['main']
-  pull_request:
-    branches: ['main']
+    paths:
+      - '.github/workflows/analyze.yml'
+      - '**.py'
+      - 'pyproject.toml'
 
 jobs:
-  mypy:
-    name: Lint
+  analyze:
+    name: Static analysis
 
     runs-on: ubuntu-latest
 
@@ -27,5 +28,4 @@ jobs:
 
       - run: poetry show
 
-      - name: Run mypy
-        run: poetry run mypy src/ tests/
+      - run: poetry run mypy src/ tests/
