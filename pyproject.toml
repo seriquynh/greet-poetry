@@ -1,6 +1,6 @@
 [project]
 name = "greet-poetry"
-version = "0.1.0"
+version = "0.1.0.dev"
 description = "This is a Python package template using Poetry."
 authors = [{name="Quynh Nguyen", email="<seriquynh@gmail.com>"}]
 readme = "README.md"

@@ -1,19 +1,23 @@
-Greet Poetry
+<h1 style="text-align: center">Greet Poetry</h1>
 
-## About
+<p style="text-align: center">
+    <a href="https://github.com/seriquynh/greet-poetry/actions">
+        <img src="https://github.com/seriquynh/greet-poetry/workflows/test/badge.svg" alt="CI Status">
+    </a>
+    <a href="https://pypi.org/project/hapideploy">
+        <img src="https://img.shields.io/pypi/dm/greet-poetry" alt="Monthly Downloads">
+    </a>
+    <a href="https://pypi.org/project/hapideploy">
+        <img src="https://img.shields.io/pypi/v/greet-poetry" alt="Latest Stable Version">
+    </a>
+    <a href="https://pypi.org/project/hapideploy">
+        <img src="https://img.shields.io/pypi/l/greet-poetry" alt="The MIT License">
+    </a>
+</p>
 
-I want to create a PyPI package. Therefore, I need to answer some questions:
+## Introduction
 
-- How is a PyPI package structured?
-- How is it tested (Unit)? What about static analysis and code style?
-- How is it built and published to [PyPI](https://pypi.org)?
-- How is it integrated with GitHub Actions?
-
-## Structure
-- `src` directory contains source files.
-- `tests` directory contains test files
-- `pyproject.toml` is a configuration file, to define build system requirements, project metadata, and other settings.
-
+This is a Python package template using Poetry.
 
 ## Requirements
 
@@ -21,13 +25,13 @@ I want to create a PyPI package. Therefore, I need to answer some questions:
 
 ## Development
 
-Install `poetry` CLI.
+Install the `poetry` CLI.
 
 ```bash
 pip install poetry
 ```
 
-Install project dependencies.
+Install the project dependencies.
 
 ```bash
 poetry install
@@ -60,3 +64,7 @@ poetry config pypi-token.pypi <pypi-api-token>
 
 peotry publish
 ```
+
+## License
+
+Greet Poetry is licensed under the [MIT license](LICENSE.md).
